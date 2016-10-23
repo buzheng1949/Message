@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="#FF60605A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+        <TextView
+            android:id="@+id/tv_aboutsoft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关于软件"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@mipmap/background_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:clickable="true"
+            android:background="@mipmap/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+       <TextView
+        android:text="
+        版本：V1.0正式版\n
+        开发人员：爱吃青菜的小鱼\n
+        联系邮箱：yupeibiao@gmail.com\n
+        软件声明：本人在此表示本软件只申请普通信息权限，并未进行其他任何后台服务以及盗取用户隐私行为\n
+        如您在使用过程中有何建议，欢迎以邮件的形式发到本人邮箱，感谢。
+        "
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+   </LinearLayout>
+
+</LinearLayout>

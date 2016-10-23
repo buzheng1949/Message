@@ -1,0 +1,192 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".com.example.yupeibiao.message.activity.MainActivity" >
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:background="#FF60605A"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        <TextView
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+
+            android:text="编辑"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        <TextView
+
+        android:text="会话"
+        android:id="@+id/topbar"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        <ImageButton
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_nav_1_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+          </LinearLayout>
+    </LinearLayout>
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <FrameLayout
+                android:background="@mipmap/background_message"
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="530dp" >
+            </FrameLayout>
+            <TabWidget
+                android:visibility="gone"
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 >
+            </TabWidget>
+            <!-- 自定义导航 -->
+            
+            <RelativeLayout
+                android:background="#FF60605A"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    <!-- 第一个三分之一 -->
+                    <LinearLayout
+                        android:paddingTop="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <!-- 会话标签 -->
+
+                        <LinearLayout
+                            android:id="@+id/tab_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:paddingLeft="10dp"
+                                android:src="@mipmap/ic_nav_1_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="会话" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 第二个三分之一 -->
+
+                    <LinearLayout
+                        android:paddingTop="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <!-- 文件夹标签 -->
+
+                        <LinearLayout
+                            android:id="@+id/tab_folder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:src="@mipmap/ic_nav_3_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="文件夹" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 第三个三分之一 -->
+
+                    <LinearLayout
+                        android:paddingTop="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" >
+
+                        <!-- 群组标签 -->
+
+                        <LinearLayout
+                            android:id="@+id/tab_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:src="@mipmap/ic_nav_5_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="群组" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

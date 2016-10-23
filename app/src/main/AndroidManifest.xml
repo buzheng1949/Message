@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yupeibiao.message">
+    <uses-permission android:name="android.permission.WRITE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".com.example.yupeibiao.message.activity.NewMessageActivity"></activity>
+        <activity
+            android:name=".com.example.yupeibiao.message.activity.MainActivity"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.CheckPasswordActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.ClearPasswordActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.LogingActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.SettingActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.AboutSoftActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.FolderActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.GroupActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.MessageActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.FolderDetailActivity"></activity>
+        <activity android:name=".com.example.yupeibiao.message.activity.MessageDetailActivity"></activity>
+        <receiver android:name=".com.example.yupeibiao.message.receiver.SendMessageReceiver"></receiver>
+        <service android:name=".com.example.yupeibiao.message.service.MySmsService"></service>
+        <receiver android:name=".com.example.yupeibiao.message.receiver.ReceiveMessageReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".com.example.yupeibiao.message.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_date_time"
+        android:layout_height="20dp"
+        android:layout_width="match_parent"/>
+    <!--   android:shrinkColumns="0"  压缩第0列，当第0列的内容过多时，不至于将其他列的内容，挤出屏幕  -->
+    <TableLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="100dp"
+        android:id="@+id/tl_receive"
+        android:layout_width="match_parent"
+        android:shrinkColumns="0"
+        android:layout_height="wrap_content" >
+
+        <TableRow android:layout_height="wrap_content" >
+            <TextView
+                android:textIsSelectable="true"
+                android:background="@drawable/chat_other_bg"
+                android:id="@+id/tv_msg_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_date"
+        android:layout_height="20dp"
+        android:layout_width="match_parent"/>
+    <!--   android:shrinkColumns="1"  压缩第0列，当第0列的内容过多时，不至于将其他列的内容，挤出屏幕  -->
+    <TableLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/tl_send"
+        android:layout_width="match_parent"
+        android:shrinkColumns="1"
+        android:layout_height="wrap_content" >
+
+        <TableRow android:layout_height="wrap_content" 
+            android:gravity="right">
+
+            <TextView
+                android:textIsSelectable="true"
+                android:id="@+id/tv_msg_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_my_bg"
+                />
+
+            
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
